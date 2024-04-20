@@ -4,7 +4,7 @@ namespace Alfianizzah\Helpcode\Helper;
 
 class StringHelper
 {
-    public function helloWorld()
+    public static function helloWorld()
     {
         return "hello world";
     }
