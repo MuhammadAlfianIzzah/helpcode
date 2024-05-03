@@ -15,7 +15,7 @@ class StringHelper
     public static function randomQuote()
     {
 
-        $jsonData = file_get_contents(__DIR__ . "../datasets/quotes.json");
+        $jsonData = file_get_contents("../datasets/quotes.json");
         if ($jsonData === false) {
             echo "Error reading JSON file";
         } else {
