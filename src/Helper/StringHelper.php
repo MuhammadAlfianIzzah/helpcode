@@ -14,8 +14,7 @@ class StringHelper
     }
     public static function randomQuote()
     {
-
-        $jsonData = file_get_contents("../datasets/quotes.json");
+        $jsonData = file_get_contents(__DIR__ . "/../datasets/quotes.json");
         if ($jsonData === false) {
             echo "Error reading JSON file";
         } else {
@@ -26,8 +25,10 @@ class StringHelper
             if ($data === null) {
                 echo "Error decoding JSON";
             } else {
+                $randomIndex = array_rand($data);
+
                 // Display the decoded JSON data
-                var_dump($data[0]["quote"]);
+                return $data[$randomIndex]["quote"];
             }
         }
     }
